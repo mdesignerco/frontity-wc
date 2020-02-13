@@ -1,0 +1,58 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.41.6",
+  "hash": "8ce685963a6577ac4383",
+  "publicPath": "/static/",
+  "outputPath": "F:\\_Trabajos\\React\\frontity\\frontity-wc\\build\\static",
+  "assetsByChunkName": {
+    "frontity-wc": "frontity-wc.module.js"
+  },
+  "assets": [
+    {
+      "name": "frontity-wc.module.js",
+      "size": 5031485,
+      "chunks": [
+        "frontity-wc"
+      ],
+      "chunkNames": [
+        "frontity-wc"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "frontity-wc": {
+      "chunks": [
+        "frontity-wc"
+      ],
+      "assets": [
+        "frontity-wc.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "frontity-wc": {
+      "chunks": [
+        "frontity-wc"
+      ],
+      "assets": [
+        "frontity-wc.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": []
+}
