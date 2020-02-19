@@ -2,21 +2,79 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.6",
-  "hash": "8ce685963a6577ac4383",
+  "hash": "5b18fc83c92f26946811",
   "publicPath": "/static/",
   "outputPath": "F:\\_Trabajos\\React\\frontity\\frontity-wc\\build\\static",
   "assetsByChunkName": {
-    "frontity-wc": "frontity-wc.module.js"
+    "frontity-wc": [
+      "frontity-wc.module.js",
+      "frontity-wc.c1e704b51398920190b1.hot-update.js"
+    ],
+    "list": "list.module.js"
   },
   "assets": [
     {
-      "name": "frontity-wc.module.js",
-      "size": 5031485,
+      "name": "c1e704b51398920190b1.hot-update.json",
+      "size": 53,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "frontity-wc.c1e704b51398920190b1.hot-update.js",
+      "size": 4162,
       "chunks": [
         "frontity-wc"
       ],
       "chunkNames": [
         "frontity-wc"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "frontity-wc.module.js",
+      "size": 8595802,
+      "chunks": [
+        "frontity-wc"
+      ],
+      "chunkNames": [
+        "frontity-wc"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/iso.svg",
+      "size": 2210,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/logo.svg",
+      "size": 3102,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "list.module.js",
+      "size": 49837,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
       ],
       "info": {},
       "emitted": false
@@ -29,7 +87,8 @@
         "frontity-wc"
       ],
       "assets": [
-        "frontity-wc.module.js"
+        "frontity-wc.module.js",
+        "frontity-wc.c1e704b51398920190b1.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -41,7 +100,18 @@
         "frontity-wc"
       ],
       "assets": [
-        "frontity-wc.module.js"
+        "frontity-wc.module.js",
+        "frontity-wc.c1e704b51398920190b1.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -50,7 +120,7 @@
   "logging": {
     "webpack.buildChunkGraph.visitModules": {
       "entries": [],
-      "filteredEntries": 2,
+      "filteredEntries": 5,
       "debug": false
     }
   },

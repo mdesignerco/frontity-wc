@@ -1,23 +1,41 @@
-import React from "react";
+import Theme from './components';
+//import { productCategoriesHandler } from './handlers/product-categories-handler';
+import { productHandler } from './handlers/product-handler';
+//import { shopHandler } from './handlers/shop-handler';
 
-const Root = () => {
-  return (
-    <>
-      You can edit your package in:
-      <pre>packages\frontity-wc-theme\src\index.js</pre>
-    </>
-  );
-};
+const addToCart = ({ state }) => ({ productId, quantity }) => {
+  state.theme.cart.push({ productId, quantity });
+}
 
 export default {
-  name: "frontity-wc-theme",
+  name: 'frontity-wc-theme',
   roots: {
-    theme: Root
+    theme: Theme
   },
   state: {
-    theme: {}
+    theme: {
+      cart: []
+    }
   },
   actions: {
-    theme: {}
+    theme: {
+      /* beforeSSR: ({ actions }) => async() => {
+        await actions.source.fetch('product-categories');
+      } */
+      /* addToCart: ({ state }) => ({ productId, quantity }) => {
+        state.theme.cart.push({ productId, quantity });
+      }, */
+      addToCart
+
+    }
+  },
+  libraries: {
+    source: {
+      handlers: [
+        //productCategoriesHandler,
+        productHandler,
+        //shopHandler,
+      ]
+    }
   }
 };
