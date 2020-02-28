@@ -4,24 +4,33 @@ import { connect } from 'frontity';
 import ProductList from './product-list/';
 import PostList from './post-list/';
 import Post from './post';
-import Product from './product';
-import Shop from './shop';
+import Page from './page';
+import Product from './product-single/';
+//import Shop from './shop';
 import Loader from './loader';
 
 const Main = ({ state }) => {
-    console.log(state.router.link);
+    //console.log(state.router.link);
     const data = state.source.get(state.router.link);
+    //console.log(data);
 
-    console.log(data);
-
+    /* if (state.theme.isCheckout) {
+        return (
+            <div>Checkout</div>
+        );
+    } else {
+        state.theme.isCheckout = false;
+    } */
     return (
         <Box>
             {(data.isFetching && <Loader />) ||
-             (data.isProductArchive && <ProductList />) ||
-             (data.isArchive && <PostList />) ||
-             (data.isPostType && <Post />) ||
-             //(data.isShop && <Shop />) ||
-             (data.isProduct && <Product />)}
+                (data.isProductArchive && <ProductList />) ||
+                (data.isProductCat && <ProductList />) ||
+                (data.isPostArchive && <PostList />) ||
+                (data.isPost && <Post />) ||
+                (data.isPage && <Page />) ||
+                //(data.isShop && <Shop />) ||
+                (data.isProduct && <Product />)}
         </Box>
     );
 }

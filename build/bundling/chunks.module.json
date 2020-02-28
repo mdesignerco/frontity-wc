@@ -2,19 +2,19 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.6",
-  "hash": "5b18fc83c92f26946811",
+  "hash": "40595e0189ea4fde027d",
   "publicPath": "/static/",
   "outputPath": "F:\\_Trabajos\\React\\frontity\\frontity-wc\\build\\static",
   "assetsByChunkName": {
     "frontity-wc": [
       "frontity-wc.module.js",
-      "frontity-wc.c1e704b51398920190b1.hot-update.js"
+      "frontity-wc.40125c316a81363d5973.hot-update.js"
     ],
     "list": "list.module.js"
   },
   "assets": [
     {
-      "name": "c1e704b51398920190b1.hot-update.json",
+      "name": "40125c316a81363d5973.hot-update.json",
       "size": 53,
       "chunks": [],
       "chunkNames": [],
@@ -25,8 +25,8 @@
       "emitted": false
     },
     {
-      "name": "frontity-wc.c1e704b51398920190b1.hot-update.js",
-      "size": 4162,
+      "name": "frontity-wc.40125c316a81363d5973.hot-update.js",
+      "size": 11857,
       "chunks": [
         "frontity-wc"
       ],
@@ -41,7 +41,7 @@
     },
     {
       "name": "frontity-wc.module.js",
-      "size": 8595802,
+      "size": 12720852,
       "chunks": [
         "frontity-wc"
       ],
@@ -88,7 +88,7 @@
       ],
       "assets": [
         "frontity-wc.module.js",
-        "frontity-wc.c1e704b51398920190b1.hot-update.js"
+        "frontity-wc.40125c316a81363d5973.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -101,7 +101,7 @@
       ],
       "assets": [
         "frontity-wc.module.js",
-        "frontity-wc.c1e704b51398920190b1.hot-update.js"
+        "frontity-wc.40125c316a81363d5973.hot-update.js"
       ],
       "children": {},
       "childAssets": {}

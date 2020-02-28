@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, CSSReset, theme, ThemeProvider } from '@chakra-ui/core';
 import { Head, connect } from 'frontity';
-import Header from './header';
+import Header from './header/';
 import Main from './main';
 
 
@@ -20,6 +20,7 @@ const Theme = ({ state }) => {
                     '1160px',
                 ]}
                 margin='0 auto'
+                maxWidth='100%'
             >
                 <Header />
                 <Main />

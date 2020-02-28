@@ -17,8 +17,16 @@ const Anchor = ({
 
     event.preventDefault();
     // Set the router to the new url.
+    //console.log(link)
+    /* if (link==='/checkout/') {
+      state.theme.isCheckout = true;
+      //alert('checkout')
+    } else {
+      actions.router.set(link);
+    } */
+    //console.log(link);
+
     actions.router.set(link);
-    console.log(link);
 
     // Scroll the page to the top
     window.scrollTo(0, 0);

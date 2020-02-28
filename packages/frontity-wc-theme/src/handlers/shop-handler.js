@@ -6,7 +6,7 @@ export const shopHandler = {
 
     //1. get categories
     const categoryResponse = await libraries.source.api.get({
-      endpoint: '/wc/v3/products/categories',
+      endpoint: '/wp/v2/product_cat',
     });
 
     // 2. get an array with each item in json format
@@ -14,20 +14,22 @@ export const shopHandler = {
     
     // 3. get category id by slug selected
     const catId = categories.find(cat => cat.slug === params.slug).id;
-
+    console.log('catId' + catId)
     // 4. get products
     const productsResponse = await libraries.source.api.get({
-      endpoint: '/wc/v3/products',
-      params: { category: catId }
+      endpoint: '/wp/v2/product',
+      params: { product_cat: catId }
     });
 
     // 5. add products to state
     const items = await productsResponse.json();
 
+    console.log(items)
+
     // 6. add route to data
     Object.assign(state.source.data[route], {
       items,
-      isShop: true
+      isProductArchive: true
     });
   }
 }

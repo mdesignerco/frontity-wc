@@ -12,16 +12,22 @@ const settings = {
       name: "frontity-wc-theme",
       state: {
         theme: {
+          cart: {
+            items: [],
+            cartTotal: 0,
+          },
           menu: [
             ['Home', '/'],
             ['Shop', '/product/'],
-            ['Tshirts', '/product_cat/97'],
-            ['Accessories', '/product_cat/accessories'],
+            ['Tshirts', '/categoria-producto/tshirts'],
+            ['Accessories', '/categoria-producto/accessories'],
+            ['Checkout', '/checkout/'],
           ],
           "featured": {
             "showOnList": false,
             "showOnPost": false
-          }
+          },
+          //isCheckout: false,
         }
       }
     },
@@ -39,7 +45,7 @@ const settings = {
           ],
           taxonomies: [
             {
-              taxonomy: 'product_cat',
+              taxonomy: 'categoria-producto',
               endpoint: 'product_cat',
               postTypeEndpoint: 'product',
               params: {

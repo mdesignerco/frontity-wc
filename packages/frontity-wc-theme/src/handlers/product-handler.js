@@ -1,22 +1,18 @@
 export const productHandler = {
-    name: 'product-cat',
-    priority: 10,
-    pattern: '/product_cat/:slug',
-    func: async ({ route, params, state, libraries }) => {
-  
-      // 1. get single product
-      const response = await libraries.source.api.get({
-        endpoint: '/wp/v2/product/?product_cat',
-        params: { slug: params.slug}
-      });
-  
-      // 2. add single product to state
-      const productData = await response.json();
-  
-      // 3. add route to data
-      Object.assign(state.source.data[route], {
-        productData,
-        isProduct: true
-      });
-    }
+  name: 'product',
+  priority: 10,
+  pattern: '/product/:slug',
+  func: async ({ route, params, state, libraries }) => {
+    
+    // 1. get product
+    const response = await libraries.source.api.get({
+      endpoint: `product/${params.slug}`,
+    });
+
+    // 2. add product to state
+    const [product] = await libraries.source.populate({ response, state });
+
+    // 3. add route to data
+    Object.assign(state.source.data[route], { product });
   }
+}
