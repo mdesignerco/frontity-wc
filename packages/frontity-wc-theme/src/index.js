@@ -1,70 +1,22 @@
 import Theme from './components';
 //import { productCategoriesHandler } from './handlers/product-categories-handler';
-import { productHandler } from './handlers/product-handler';
+import { cartHandler } from './handlers/cart-handler';
+import { cartProductHandler } from './handlers/cart-product-handler';
+import { checkoutHandler } from './handlers/checkout-handler';
+import { fetchMediaHandler } from './handlers/fetch-media-handler';
 //import { shopHandler } from './handlers/shop-handler';
 //import { initHandler } from './handlers/init-handler';
 
-const addToCart = ({ state, actions }) => ({ productId, quantity }) => {
-  state.theme.cart.items.push({ productId, quantity });
-  //actions.theme.calculateCartTotal();
-  let products = state.source.product;
-  actions.theme.calculateCartTotal();
-  //console.log(products);
-  /* state.theme.cart.cartTotal = state.theme.cart.items.reduce((total, product) =>
-    total + parseFloat(products[product.productId].price), 0
-  );
-  localStorage.setItem(
-    'frontity_wc_cart',
-    JSON.stringify(state.theme.cart)
-  ); */
-}
-
-const toggleShowCartDetail = ({ state }) => {
-  state.theme.showCartDetail = !state.theme.showCartDetail;
-}
-
-const calculateCartTotal = ({ state }) => {
-  let products = state.source.product;
-  state.theme.cart.cartTotal = state.theme.cart.items.reduce((total, product) =>
-    total + parseFloat(products[product.productId].price), 0
-  );
-  localStorage.setItem(
-    'frontity_wc_cart',
-    JSON.stringify(state.theme.cart)
-  );
-}
-
-const onTrashCartItem = ({ state, actions }) => ({ productId }) => {
-  //console.log(productId)
-  state.theme.cart.items = state.theme.cart.items.filter(
-    item => item.productId !== productId
-  );
-  actions.theme.calculateCartTotal();
-}
-
-
-const before = async ({ libraries, actions }) => {
-  //libraries.source.handlers.push(initHandler);
-  //await actions.source.fetch('initHandler')
-}
-
-const afterCSR = async ({ state, actions }) => {
-  if (state.frontity.platform === 'client') {
-    if (0 === state.theme.cart.items.length) {
-      const storedCart = localStorage.getItem(
-        'frontity_wc_cart'
-      );
-      if (storedCart && storedCart.length !== 0) {
-        state.theme.cart = JSON.parse(storedCart);
-        state.theme.cart.items.map(cartItem => {
-          actions.source.fetch(
-            `/product/${cartItem.productId}`,
-          );
-        })
-      };
-    }
-  }
-}
+import { addToCart } from './actions/add-to-cart';
+import { afterCSR } from './actions/after-csr';
+import { calculateCartTotal } from './actions/calculate-cart-total';
+import { openModal } from './actions/open-modal';
+import { goCheckout } from './actions/go-checkout';
+import { closeModal } from './actions/close-modal';
+import { setCheckoutField } from './actions/set-checkout-field';
+import { trashCartItem } from './actions/trash-cart-item';
+import { toggleShowCartDetail } from './actions/toggle-show-cart-detail';
+import { changeCartItemQuantity } from './actions/change-cart-item-quantity';
 
 export default {
   name: 'frontity-wc-theme',
@@ -75,17 +27,36 @@ export default {
     theme: {
       cart: [],
       showCartDetail: false,
+      showModal: false,
+      modalContent: '',
       cartTotal: 0,
+      checkoutForm: {
+        fields: {
+          firstName: '',
+          lastName: '',
+          streetAddress: '',
+          apartment: '',
+          city: '',
+          country: '',
+          postcode: '',
+          phone: '',
+          email: '',
+          notes: '',
+        }
+      }
     }
   },
   actions: {
     theme: {
-      beforeSSR: before,
-      afterCSR: afterCSR,
-
       addToCart,
+      afterCSR,
       calculateCartTotal,
-      onTrashCartItem,
+      changeCartItemQuantity,
+      closeModal,
+      goCheckout,
+      openModal,
+      setCheckoutField,
+      trashCartItem,
       toggleShowCartDetail,
     }
   },
@@ -93,7 +64,10 @@ export default {
     source: {
       handlers: [
         //productCategoriesHandler,
-        productHandler,
+        cartHandler,
+        cartProductHandler,
+        checkoutHandler,
+        fetchMediaHandler,
         //shopHandler,
       ]
     }

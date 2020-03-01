@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Flex, Image, Text } from '@chakra-ui/core';
+import { Box, Button, Flex, Image, Text } from '@chakra-ui/core';
 import { connect } from 'frontity';
 
 import { FaShoppingCart } from 'react-icons/fa';
-import CartDetail from './cart-detail';
+import HeaderCartDetail from './header-cart-detail';
 
 const HeaderCart = ({ state, actions }) => {
 
@@ -36,7 +36,7 @@ const HeaderCart = ({ state, actions }) => {
                             {
                                 state.theme.cart.items.length === 0
                                     ? <Text fontSize='0.8em'>Your cart is empty.</Text>
-                                    : <CartDetail />
+                                    : <HeaderCartDetail />
                             }
                         </Box>
                     }

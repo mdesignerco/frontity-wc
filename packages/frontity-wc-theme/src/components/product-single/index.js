@@ -1,23 +1,25 @@
 import React from 'react';
 import { Grid, Box, Button, Flex, Image } from '@chakra-ui/core';
 import { connect } from 'frontity';
+import FeaturedMedia from '../featured-media';
 
 const Product = ({ state, actions }) => {
 
-    console.log('data.type');
+    //console.log('data.type');
 
     // Get information about the current URL.
     const data = state.source.get(state.router.link);
+    //console.log(state.router.link);
     // Get the data of the product.
     const product = state.source[data.type][data.id];
 
-    const onClick = (e, productId) => {
+    /* const onClick = (e, productId) => {
         e.preventDefault();
         actions.theme.addToCart({
             productId,
             quantity: 1
         })
-    }
+    } */
 
     return (
         <Grid
@@ -26,7 +28,7 @@ const Product = ({ state, actions }) => {
             gap={6}
         >
             <Box w='100%'>
-                1
+                <FeaturedMedia id={product.featured_media} />
             </Box>
             <Box w='100%'>
                 <Box as='h2' fontWeight='bold' fontSize='2em'>
@@ -56,7 +58,9 @@ const Product = ({ state, actions }) => {
                 >
                     <Button
                         variantColor='green'
-                        onClick={(e) => onClick(e, product.id)}
+                        onClick={event => actions.theme.addToCart({
+                            event, productId: product.id, quantity: 1
+                        })}
                     >
                         Add to cart
                     </Button>
