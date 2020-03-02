@@ -4,19 +4,21 @@ import { cartHandler } from './handlers/cart-handler';
 import { cartProductHandler } from './handlers/cart-product-handler';
 import { checkoutHandler } from './handlers/checkout-handler';
 import { fetchMediaHandler } from './handlers/fetch-media-handler';
-//import { shopHandler } from './handlers/shop-handler';
+//import { placeOrderHandler } from './handlers/place-order-handler';
 //import { initHandler } from './handlers/init-handler';
 
 import { addToCart } from './actions/add-to-cart';
 import { afterCSR } from './actions/after-csr';
 import { calculateCartTotal } from './actions/calculate-cart-total';
-import { openModal } from './actions/open-modal';
-import { goCheckout } from './actions/go-checkout';
+import { changeCartItemQuantity } from './actions/change-cart-item-quantity';
 import { closeModal } from './actions/close-modal';
+import { goCheckout } from './actions/go-checkout';
+import { openModal } from './actions/open-modal';
+import { placeOrder } from './actions/place-order';
+import { processOrder } from './actions/process-order';
 import { setCheckoutField } from './actions/set-checkout-field';
 import { trashCartItem } from './actions/trash-cart-item';
 import { toggleShowCartDetail } from './actions/toggle-show-cart-detail';
-import { changeCartItemQuantity } from './actions/change-cart-item-quantity';
 
 export default {
   name: 'frontity-wc-theme',
@@ -28,22 +30,9 @@ export default {
       cart: [],
       showCartDetail: false,
       showModal: false,
+      processingOrder: false,
       modalContent: '',
       cartTotal: 0,
-      checkoutForm: {
-        fields: {
-          firstName: '',
-          lastName: '',
-          streetAddress: '',
-          apartment: '',
-          city: '',
-          country: '',
-          postcode: '',
-          phone: '',
-          email: '',
-          notes: '',
-        }
-      }
     }
   },
   actions: {
@@ -55,6 +44,8 @@ export default {
       closeModal,
       goCheckout,
       openModal,
+      placeOrder,
+      processOrder,
       setCheckoutField,
       trashCartItem,
       toggleShowCartDetail,
@@ -68,7 +59,7 @@ export default {
         cartProductHandler,
         checkoutHandler,
         fetchMediaHandler,
-        //shopHandler,
+        //placeOrderHandler,
       ]
     }
   }

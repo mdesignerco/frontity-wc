@@ -27,6 +27,19 @@ const settings = {
             "showOnList": false,
             "showOnPost": false
           },
+          checkoutFields: [
+            { name: 'firstName', title: 'First Name', value: '', error: false, half: true, isRequired: false },
+            { name: 'lastName', title: 'Last Name', value: '', error: false, half: true, isRequired: false },
+            { name: 'companyName', title: 'Company Name', value: '', error: false, half: false, isRequired: false },
+            { name: 'streetAddress', title: 'Street', value: '', error: false, half: false, isRequired: false },
+            { name: 'apartment', title: 'Apartment', value: '', error: false, half: false, isRequired: false },
+            { name: 'city', title: 'City', value: '', error: false, half: false, isRequired: false },
+            { name: 'country', title: 'Country', value: '', error: false, half: false, isRequired: false },
+            { name: 'postcode', title: 'Post Code', value: '', error: false, half: false, isRequired: false },
+            { name: 'phone', title: 'Phone', value: '', error: false, half: false, isRequired: false },
+            { name: 'email', title: 'Email', value: '', error: false, half: false, isRequired: true },
+            { name: 'notes', title: 'Notes', value: '', error: false, half: false, isRequired: false },
+          ]
           //isCheckout: false,
         }
       }
@@ -39,6 +52,7 @@ const settings = {
           postTypes: [
             {
               type: 'product',
+              //endpoint: '/wc/v3/products',
               endpoint: 'product',
               archive: '/product'
             }
@@ -47,6 +61,7 @@ const settings = {
             {
               taxonomy: 'categoria-producto',
               endpoint: 'product_cat',
+              //postTypeEndpoint: '/wc/v3/products',
               postTypeEndpoint: 'product',
               params: {
                 per_page: 5,

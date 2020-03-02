@@ -1,0 +1,15 @@
+webpackHotUpdate("frontity-wc",{
+
+/***/ "./packages/frontity-wc-theme/src/actions/place-order.js":
+/*!***************************************************************!*\
+  !*** ./packages/frontity-wc-theme/src/actions/place-order.js ***!
+  \***************************************************************/
+/*! exports provided: placeOrder */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"placeOrder\", function() { return placeOrder; });\nvar placeOrder=(_ref)=>{var{state,actions}=_ref;var error=false;state.theme.checkoutFields.map(field=>{if(field.value===''&&field.isRequired){error=true;state.theme.checkoutFields.find(f=>f.name===field.name).error='This field is required';}});if(!error){actions.theme.processOrder();}};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWNrYWdlcy9mcm9udGl0eS13Yy10aGVtZS9zcmMvYWN0aW9ucy9wbGFjZS1vcmRlci5qcz80NmZiIl0sIm5hbWVzIjpbInBsYWNlT3JkZXIiLCJzdGF0ZSIsImFjdGlvbnMiLCJlcnJvciIsInRoZW1lIiwiY2hlY2tvdXRGaWVsZHMiLCJtYXAiLCJmaWVsZCIsInZhbHVlIiwiaXNSZXF1aXJlZCIsImZpbmQiLCJmIiwibmFtZSIsInByb2Nlc3NPcmRlciJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFPLEdBQU1BLFdBQVUsQ0FBRyxRQUF3QixJQUF2QixDQUFFQyxLQUFGLENBQVNDLE9BQVQsQ0FBdUIsTUFDOUMsR0FBSUMsTUFBSyxDQUFHLEtBQVosQ0FDQUYsS0FBSyxDQUFDRyxLQUFOLENBQVlDLGNBQVosQ0FBMkJDLEdBQTNCLENBQStCQyxLQUFLLEVBQUksQ0FDcEMsR0FBSUEsS0FBSyxDQUFDQyxLQUFOLEdBQWdCLEVBQWhCLEVBQXNCRCxLQUFLLENBQUNFLFVBQWhDLENBQTRDLENBQ3hDTixLQUFLLENBQUcsSUFBUixDQUNBRixLQUFLLENBQUNHLEtBQU4sQ0FBWUMsY0FBWixDQUEyQkssSUFBM0IsQ0FDSUMsQ0FBQyxFQUFJQSxDQUFDLENBQUNDLElBQUYsR0FBV0wsS0FBSyxDQUFDSyxJQUQxQixFQUVFVCxLQUZGLENBRVUsd0JBRlYsQ0FHSCxDQUNKLENBUEQsRUFRQSxHQUFJLENBQUNBLEtBQUwsQ0FBWSxDQUNSRCxPQUFPLENBQUNFLEtBQVIsQ0FBY1MsWUFBZCxHQUVILENBQ0osQ0FkTSIsImZpbGUiOiIuL3BhY2thZ2VzL2Zyb250aXR5LXdjLXRoZW1lL3NyYy9hY3Rpb25zL3BsYWNlLW9yZGVyLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IHBsYWNlT3JkZXIgPSAoeyBzdGF0ZSwgYWN0aW9ucyB9KSA9PiB7XHJcbiAgICBsZXQgZXJyb3IgPSBmYWxzZTtcclxuICAgIHN0YXRlLnRoZW1lLmNoZWNrb3V0RmllbGRzLm1hcChmaWVsZCA9PiB7XHJcbiAgICAgICAgaWYgKGZpZWxkLnZhbHVlID09PSAnJyAmJiBmaWVsZC5pc1JlcXVpcmVkKSB7XHJcbiAgICAgICAgICAgIGVycm9yID0gdHJ1ZTtcclxuICAgICAgICAgICAgc3RhdGUudGhlbWUuY2hlY2tvdXRGaWVsZHMuZmluZChcclxuICAgICAgICAgICAgICAgIGYgPT4gZi5uYW1lID09PSBmaWVsZC5uYW1lXHJcbiAgICAgICAgICAgICkuZXJyb3IgPSAnVGhpcyBmaWVsZCBpcyByZXF1aXJlZCc7XHJcbiAgICAgICAgfVxyXG4gICAgfSk7XHJcbiAgICBpZiAoIWVycm9yKSB7XHJcbiAgICAgICAgYWN0aW9ucy50aGVtZS5wcm9jZXNzT3JkZXIoKTtcclxuICAgICAgICBcclxuICAgIH1cclxufSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./packages/frontity-wc-theme/src/actions/place-order.js\n");
+
+/***/ })
+
+})

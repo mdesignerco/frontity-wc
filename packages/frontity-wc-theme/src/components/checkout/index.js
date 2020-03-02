@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Grid, Input, Text } from '@chakra-ui/core';
 import { connect } from 'frontity'
 import OrderReview from './order-review';
-import BillingDetails from './billing-details';
+import BillingDetail from './billing-detail';
 import { PageTitle } from '../page-title';
 
 const Checkout = () => {
@@ -14,7 +14,7 @@ const Checkout = () => {
                 templateColumns="50% 50%"
                 gap={6}
             >
-                <BillingDetails />
+                <BillingDetail />
                 <OrderReview />
             </Grid>
         </Box>

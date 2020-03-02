@@ -1,0 +1,14 @@
+webpackHotUpdate("frontity-wc",{
+
+/***/ "./packages/frontity-wc-theme/src/actions/process-order.js":
+/*!*****************************************************************!*\
+  !*** ./packages/frontity-wc-theme/src/actions/process-order.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\packages\\\\frontity-wc-theme\\\\src\\\\actions\\\\process-order.js: Can not use keyword 'await' outside an async function (23:25)\\n\\n  21 | \\n  22 |     try {\\n> 23 |         const response = await fetch(\\n     |                          ^\\n  24 |             `${state.frontity.url}/wp-json/wp/v2/create-order`,\\n  25 |             {\\n  26 |                 method: 'POST',\\n    at Object.raise (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\parser\\\\location.js:41:63)\\n    at Object.checkReservedWord (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\parser\\\\expression.js:2189:14)\\n    at Object.parseIdentifierName (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\parser\\\\expression.js:2122:12)\\n    at Object.parseIdentifier (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\parser\\\\expression.js:2081:23)\\n    at Object.parseExprAtom (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\parser\\\\expression.js:929:25)\\n    at Object.parseExprAtom (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\plugins\\\\jsx\\\\index.js:528:22)\\n    at Object.parseExprSubscripts (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\parser\\\\expression.js:526:23)\\n    at Object.parseMaybeUnary (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\parser\\\\expression.js:506:21)\\n    at Object.parseExprOps (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\parser\\\\expression.js:295:23)\\n    at Object.parseMaybeConditional (F:\\\\_Trabajos\\\\React\\\\frontity\\\\frontity-wc\\\\node_modules\\\\@babel\\\\parser\\\\src\\\\parser\\\\expression.js:247:23)\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3BhY2thZ2VzL2Zyb250aXR5LXdjLXRoZW1lL3NyYy9hY3Rpb25zL3Byb2Nlc3Mtb3JkZXIuanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./packages/frontity-wc-theme/src/actions/process-order.js\n");
+
+/***/ })
+
+})
